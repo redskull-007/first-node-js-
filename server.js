@@ -1,8 +1,10 @@
 const http = require('http');
-const server= http.createServer((req,res) =>{
-//    console.log('kumar abhishek'); 
 
+const myName = 'Kumar Abhishek';
+
+const server = http.createServer((req, res) => {
+  res.end(myName);
 });
 
-server.listen(4000);
-console.log('kumar abhishek'); 
+const PORT = 4000;
+server.listen(PORT, () => console.log(myName));
